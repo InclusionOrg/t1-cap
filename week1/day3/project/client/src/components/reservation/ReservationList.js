@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {fetchReservations} from './reservation-service';
 
 class ReservationList extends Component {
     state = {
@@ -6,9 +7,12 @@ class ReservationList extends Component {
     }
 
     componentDidMount() {
-        fetch('/reservations')
-            .then(res => res.json())
-            .then(reservations => this.setState({ reservations }));
+        fetchReservations().then(
+            reservations => this.setState({ reservations })
+        );
+        // fetch('/reservations')
+        //     .then(res => res.json())
+        //     .then(reservations => this.setState({ reservations }));
     }
 
     render() {
