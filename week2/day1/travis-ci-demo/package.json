@@ -1,0 +1,12 @@
+{
+  "name": "travis-demo",
+  "description": "Simple Travis-CI check for JSHint (Code Linting)",
+  "author": "Inclusion",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jshint": "^2.10.2"
+  },
+  "scripts": {
+    "test": "jshint hello.js"
+  }
+}
